@@ -6,6 +6,7 @@
     <title>Categories</title>
 </head>
 <body style="display: flex; justify-content: center">
+
     @foreach ($categories as $category)
         <div style="border: 1px solid black; margin: 7px 10px; width: fit-content; padding: 3px 6px">
             <h2 style="text-align: center">Category: <span style="color: {{ $category['hex_color'] }}">{{ $category["name"] }}</span></h2>
@@ -19,5 +20,6 @@
             @endforeach
         </div>
     @endforeach
+    <a style="position: absolute; bottom: 0; left: 0" href="/categories/create">Create</a>
 </body>
 </html>
